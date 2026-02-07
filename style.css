@@ -1,1 +1,26 @@
-style.css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+  max-width: 900px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
