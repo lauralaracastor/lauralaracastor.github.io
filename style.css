@@ -1,5 +1,6 @@
+/* Base */
 body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   background-color: #fafafa;
   color: #222;
@@ -26,11 +27,6 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #0077cc;
 }
 
 /* Header */
@@ -46,6 +42,7 @@ header h1 {
 
 header p {
   color: #666;
+  margin: 5px 0;
 }
 
 /* Sections */
@@ -55,70 +52,40 @@ h2 {
   margin-top: 40px;
 }
 
-/* Cards (for projects/publications) */
-li {
-  margin-bottom: 15px;
+/* Lists */
+ul, ol {
+  padding-left: 0;
+  list-style: none;
 }
 
-li:hover {
-  background: #f5f5f5;
-  padding: 5px;
-  transition: 0.2s;
+/* Cards */
+.card {
+  background: white;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* Links */
 a {
   color: #0077cc;
-}
-
-a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #888;
-  font-size: 0.9em;
-}
-
-/* Transition */
-
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Fonts */
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-
-/* Card style */
-
-.card {
-  background: white;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-
+/* Buttons (CV page) */
 .cv-buttons {
   margin-top: 30px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Primary button */
 .btn {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 16px 28px;
   background-color: #0077cc;
   color: white;
   text-decoration: none;
@@ -127,13 +94,14 @@ body {
   font-size: 1.1em;
 }
 
-/* Secondary button */
 .btn.secondary {
   background-color: #555;
 }
 
-.cv-buttons .btn:hover {
-  transform: none;
-  box-shadow: none;
-  opacity: 0.9;
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9em;
 }
