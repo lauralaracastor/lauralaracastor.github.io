@@ -7,6 +7,15 @@ body {
   line-height: 1.6;
 }
 
+/* Profile */
+.profile {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
 /* Layout */
 main, section, header {
   max-width: 900px;
