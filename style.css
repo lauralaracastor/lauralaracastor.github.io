@@ -131,3 +131,9 @@ body {
 .btn.secondary {
   background-color: #555;
 }
+
+.cv-buttons .btn:hover {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.9;
+}
