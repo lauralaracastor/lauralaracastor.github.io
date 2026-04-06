@@ -2,9 +2,16 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #fafafa;
+  background-color: #fafafa;
   color: #222;
   line-height: 1.6;
+}
+
+/* Layout */
+main, section, header {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 /* Navigation */
@@ -22,53 +29,43 @@ nav a {
   font-weight: 500;
 }
 
-/* Layout */
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  padding-top: 40px;
 }
 
-.profile {
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #eee;
+header h1 {
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-h1 {
-  margin: 10px 0 5px 0;
-  font-size: 2em;
-}
-
-.title {
+header p {
   color: #666;
-  margin-bottom: 5px;
-}
-
-.affiliation {
-  color: #777;
-  font-size: 0.95em;
+  margin: 5px 0;
 }
 
 /* Sections */
 h2 {
-  margin-top: 30px;
   border-bottom: 2px solid #eee;
   padding-bottom: 5px;
+  margin-top: 40px;
 }
 
 /* Lists */
-ul {
-  padding-left: 20px;
+ul, ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* Links */
@@ -77,10 +74,34 @@ a {
   text-decoration: underline;
 }
 
+/* Buttons (CV page) */
+.cv-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 28px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.btn.secondary {
+  background-color: #555;
+}
+
 /* Footer */
 footer {
   text-align: center;
-  margin: 40px 0;
+  margin-top: 40px;
   color: #888;
   font-size: 0.9em;
 }
