@@ -82,3 +82,7 @@ footer {
   color: #888;
   font-size: 0.9em;
 }
+
+* {
+  transition: all 0.2s ease-in-out;
+}
