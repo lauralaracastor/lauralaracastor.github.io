@@ -106,3 +106,28 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+
+.cv-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Primary button */
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Secondary button */
+.btn.secondary {
+  background-color: #555;
+}
