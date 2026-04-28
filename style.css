@@ -2,7 +2,7 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #fdfdfd;
+  background-color: #fcfaf7;
   color: #1a1a1a;
   line-height: 1.7;
 }
@@ -34,7 +34,7 @@ nav a:hover {
 /* Highlight for the current page */
 nav a.active {
   color: #1a1a1a;
-  border-bottom: 2px solid #0077cc;
+  border-bottom: 2px solid #4a6741;
   padding-bottom: 4px;
 }
 
@@ -112,9 +112,21 @@ ul, ol {
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
+.card a {
+  color: #4a6741;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.card a:hover {
+  color: #2e4028; /* Darkens slightly when hovering */
+  text-decoration: underline;
+}
+
 /* Links - Minimalist approach */
 a {
-  color: #0077cc;
+  color: #4a6741;
   text-decoration: none;
   transition: text-decoration 0.3s;
 }
@@ -135,7 +147,7 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 14px 24px;
-  background-color: #0077cc;
+  background-color: #4a6741;
   color: white !important;
   text-decoration: none;
   border-radius: 6px;
@@ -145,6 +157,7 @@ a:hover {
 }
 
 .btn:hover {
+  background-color: #2e4028;
   opacity: 0.9;
   text-decoration: none;
 }
@@ -155,7 +168,7 @@ a:hover {
 
 /* Contact Form Styling */
 .contact-container {
-  background: #f9f9f9;
+  background: #f0f0f0;
   padding: 30px;
   border-radius: 8px;
   margin-top: 40px;
@@ -177,7 +190,7 @@ a:hover {
 }
 
 .contact-form button {
-  background: #0077cc;
+  background: #4a6741;
   color: white;
   padding: 12px;
   border: none;
@@ -188,7 +201,7 @@ a:hover {
 }
 
 .contact-form button:hover {
-  background: #005fa3;
+  background: #2e4028;
 }
 
 /* Mobile Responsiveness */
