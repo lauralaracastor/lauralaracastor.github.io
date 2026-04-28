@@ -21,7 +21,7 @@ nav {
 nav a {
   margin: 0 12px;
   text-decoration: none;
-color: #666;
+  color: #666;
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.3s ease;
@@ -41,8 +41,14 @@ nav a.active {
 /* Layout */
 main {
   max-width: 800px; /* Narrower for better readability */
-  margin: auto;
+  margin: 0 auto;
   padding: 40px 20px;
+  display: block;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 /* Header & Profile */
@@ -103,12 +109,7 @@ ul, ol {
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #f0f0f0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 /* Links - Minimalist approach */
