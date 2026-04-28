@@ -28,22 +28,46 @@ nav a {
 }
 
 nav a:hover {
-  color: #0077cc;
+  color: #2a6f7d;
 }
 
-/* Highlight for the current page */
 nav a.active {
   color: #1a1a1a;
   border-bottom: 2px solid #2a6f7d;
   padding-bottom: 4px;
 }
 
-/* Layout */
+/* Layout Core */
 main {
-  max-width: 800px; /* Narrower for better readability */
+  max-width: 900px; /* Narrower for better readability */
   margin: 0 auto;
   padding: 40px 20px;
   display: block;
+}
+
+.home-layout {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.sidebar {
+  flex: 0 0 260px;
+  text-align: left;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.sidebar-links {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 section {
@@ -64,25 +88,20 @@ header {
   object-position: 75% center;
   border: 1px solid #eee;
   margin-bottom: 20px;
-  /* Soft shadow for depth */
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin: 10px 0;
-  letter-spacing: -0.02em;
-}
+.sidebar h1 { font-size: 1.6rem; line-height: 1.2; margin: 10px 0; }
+header h1 { font-size: 2.2rem; font-weight: 600; margin: 10px 0; letter-spacing: -0.02em; }
 
-header .title {
+.sidebar .title, header .title {
   font-size: 1.1rem;
-  color: #0077cc;
+  color: #2a6f7d;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-header .affiliation {
+.sidebar .affiliation, header .affiliation {
   font-size: 1rem;
   color: #666;
 }
@@ -96,13 +115,28 @@ h2 {
   font-weight: 600;
 }
 
+.about-content h2 {
+  margin-top: 0; /* Ensures "About Me" starts at the same level as the photo */
+}
+
 /* Lists */
 ul, ol {
   padding-left: 0;
   list-style: none;
 }
 
-/* Cards */
+/* Links & Cards */
+a {
+  color: #2a6f7d;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1a454e;
+}
+
 .card {
   background: white;
   padding: 25px;
@@ -120,18 +154,7 @@ ul, ol {
 }
 
 .card a:hover {
-  color: #1a454e; /* Darkens slightly when hovering */
-  text-decoration: underline;
-}
-
-/* Links - Minimalist approach */
-a {
-  color: #4a6741;
-  text-decoration: none;
-  transition: text-decoration 0.3s;
-}
-
-a:hover {
+  color: #1a454e;
   text-decoration: underline;
 }
 
@@ -168,7 +191,8 @@ a:hover {
 
 /* Contact Form Styling */
 .contact-container {
-  background: #f0f0f0;
+  background: white;
+  border: 1px solid #eee;
   padding: 30px;
   border-radius: 8px;
   margin-top: 40px;
@@ -205,20 +229,28 @@ a:hover {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 600px) {
-  nav {
-    padding: 15px 5px;
+@media (max-width: 850px) {
+  .home-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  nav a {
-    margin: 0 5px;
-    font-size: 0.85rem;
+  
+  .sidebar {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
-  .profile {
-    width: 200px;
-    height: 200px;
+  .sidebar-links { align-items: center; }
+  h2, .about-content h2 { 
+    text-align: center; 
+    margin-top: 20px; /* Reduces the giant gap on mobile screens */
   }
-  header h1 {
-    font-size: 1.8rem;
+
+  nav a { 
+    margin: 0 5px; 
+    font-size: 0.85rem; 
   }
 }
 
