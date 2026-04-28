@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="cv.html" class="active">CV</a> <a href="publications.html">Publications</a>
+  <a href="projects.html">Projects</a>
+  <a href="speaker.html">Speaker</a>
+  <a href="media.html">Media</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Contact</h2>
+
+    <div class="contact-container">
+      <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+<footer>
+  <p>
+    <a href="https://scholar.google.com/citations?hl=en&user=VYz7oYgAAAAJ">Google Scholar</a> |
+    <a href="https://www.linkedin.com/in/laura-lara-castor">LinkedIn</a> |
+    <a href="https://github.com/lauralaracastor">GitHub</a> |
+    <a href="mailto:lauralac@uw.edu">Email</a>
+  </p>
+</footer>
