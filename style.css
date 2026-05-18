@@ -84,12 +84,23 @@ main {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
+/* Guardrail: Force the sidebar link wrapper to match the exact icon sizes */
+.sidebar-links a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 /* Base style for the Google Scholar SVG */
 .sidebar-links a.scholar-icon svg {
-  width: 1.65rem;      /* Matches the visual weight of the text icons */
-  height: 1.65rem;
+  width: 1.8rem;      /* FIXED: Hard capped so it can never blow up the page */
+  height: 1.8rem;
   fill: #666;          /* Colors the graphic gray to match the others */
   transition: fill 0.2s ease, transform 0.2s ease;
+  display: block;
 }
 
 /* Hover effects for Font Awesome links */
@@ -140,58 +151,21 @@ header h1 { font-size: 2.2rem; font-weight: 600; margin: 10px 0; letter-spacing:
   margin-bottom: 5px;
 }
 
-.sidebar .affiliation-role, header .affiliation {
+.sidebar .affiliation-line {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 15px; /* Creates a nice gap right before the IHME grid starts */
+  margin: 4px 0; /* Gives a subtle, tight spacing between each line */
+  line-height: 1.4;
 }
 
-/* Container spacing */
-.affiliation-container {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* Adds space between the IHME block and the UW block */
-}
-
-/* Align acronym and name side-by-side */
-.affiliation-row {
-  display: flex;
-  align-items: flex-start; /* Aligns the tops of the text */
-  text-align: left;
-}
-
-/* Style for the acronym column */
-.sidebar .affiliation-container .acronym {
+/* Keeps it looking uniform on pages with a header structure instead of a sidebar */
+header .affiliation-line {
   font-size: 1rem;
   color: #666;
-  font-weight: 500;
-  flex: 0 0 65px; /* Adjust this number if you want more/less space after the | symbol */
-  white-space: nowrap;
+  margin: 4px 0;
+  line-height: 1.4;
 }
-
-/* Style for the name column (handles the automatic wrapping neatly) */
-.sidebar .affiliation-container .full-name {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.4; /* Slightly tighter line height for a clean block look */
-  flex: 1;
-}
-
-/* Ensures it centers beautifully on mobile along with the rest of your sidebar */
-@media (max-width: 850px) {
-  .affiliation-row {
-    justify-content: center;
-  }
-  .sidebar .affiliation-container .acronym {
-    flex: none;
-    margin-right: 6px;
-  }
-  .sidebar .affiliation-container .full-name {
-    flex: none;
-    text-align: left; /* Keeps the text block readable even when centered on mobile */
-  }
-}
+  
 
 /* Content Sections */
 h2 {
@@ -340,19 +314,6 @@ a:hover {
     margin: 0 5px; 
     font-size: 0.85rem; 
   }
-
-  .affiliation-row {
-    justify-content: center;
-  }
-  .sidebar .affiliation-container .acronym {
-    flex: none;
-    margin-right: 6px;
-  }
-  .sidebar .affiliation-container .full-name {
-    flex: none;
-    text-align: left; /* Keeps the text block readable even when centered on mobile */
-  }
-  
 }
 
 /* Footer */
@@ -383,6 +344,7 @@ footer {
   height: 1.5rem;
   fill: #888;
   transition: fill 0.2s ease, transform 0.2s ease;
+  display: block;        
 }
 
 /* Hover effects for Font Awesome icons */
