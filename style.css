@@ -140,9 +140,57 @@ header h1 { font-size: 2.2rem; font-weight: 600; margin: 10px 0; letter-spacing:
   margin-bottom: 5px;
 }
 
-.sidebar .affiliation, header .affiliation {
+.sidebar .affiliation-role, header .affiliation {
   font-size: 1rem;
   color: #666;
+  margin-bottom: 15px; /* Creates a nice gap right before the IHME grid starts */
+}
+
+/* Container spacing */
+.affiliation-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adds space between the IHME block and the UW block */
+}
+
+/* Align acronym and name side-by-side */
+.affiliation-row {
+  display: flex;
+  align-items: flex-start; /* Aligns the tops of the text */
+  text-align: left;
+}
+
+/* Style for the acronym column */
+.sidebar .affiliation-container .acronym {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  flex: 0 0 65px; /* Adjust this number if you want more/less space after the | symbol */
+  white-space: nowrap;
+}
+
+/* Style for the name column (handles the automatic wrapping neatly) */
+.sidebar .affiliation-container .full-name {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4; /* Slightly tighter line height for a clean block look */
+  flex: 1;
+}
+
+/* Ensures it centers beautifully on mobile along with the rest of your sidebar */
+@media (max-width: 850px) {
+  .affiliation-row {
+    justify-content: center;
+  }
+  .sidebar .affiliation-container .acronym {
+    flex: none;
+    margin-right: 6px;
+  }
+  .sidebar .affiliation-container .full-name {
+    flex: none;
+    text-align: left; /* Keeps the text block readable even when centered on mobile */
+  }
 }
 
 /* Content Sections */
@@ -281,6 +329,7 @@ a:hover {
     max-width: 300px;
     text-align: center;
   }
+  
   .sidebar-links { align-items: center; }
   h2, .about-content h2 { 
     text-align: center; 
@@ -291,6 +340,19 @@ a:hover {
     margin: 0 5px; 
     font-size: 0.85rem; 
   }
+
+  .affiliation-row {
+    justify-content: center;
+  }
+  .sidebar .affiliation-container .acronym {
+    flex: none;
+    margin-right: 6px;
+  }
+  .sidebar .affiliation-container .full-name {
+    flex: none;
+    text-align: left; /* Keeps the text block readable even when centered on mobile */
+  }
+  
 }
 
 /* Footer */
