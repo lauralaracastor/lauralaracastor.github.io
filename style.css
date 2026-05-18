@@ -2,7 +2,7 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #f7f9fa;
+  background-color: #fafafa; /* Swapped from bluish off-white to a warm, bright Alabaster */
   color: #1a1a1a;
   line-height: 1.7;
 }
@@ -11,7 +11,7 @@ body {
 nav {
   background: white;
   border-bottom: 1px solid #f0f0f0;
-  padding: 20px;
+  padding: 15px 20px; /* Adjusted padding for better button alignment */
   text-align: center;
   position: sticky;
   top: 0;
@@ -19,27 +19,33 @@ nav {
 }
 
 nav a {
-  margin: 0 12px;
+  margin: 0 4px;
   text-decoration: none;
   color: #666;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  padding: 8px 16px;       /* Adds padding around text to create the "box" shape */
+  border-radius: 6px;       /* Smooth, rounded corners for the tabs */
+  transition: all 0.3s ease; /* Smoothly transitions background and text color together */
+  display: inline-block;
 }
 
+/* Hover State: Turns into a Teal box with white text */
 nav a:hover {
-  color: #2a6f7d;
+  color: white;
+  background-color: #2a6f7d; 
+  text-decoration: none;    /* Ensures no underline appears */
 }
 
 nav a.active {
-  color: #1a1a1a;
-  border-bottom: 2px solid #2a6f7d;
-  padding-bottom: 4px;
+  color: white;
+  background-color: #2a6f7d;
+  border-bottom: none;      /* Removes the old under-line border */
 }
 
 /* Layout Core */
 main {
-  max-width: 900px; /* Narrower for better readability */
+  max-width: 1000px; /* Increased from 900px to efficiently use left/right space */
   margin: 0 auto;
   padding: 40px 20px;
   display: block;
