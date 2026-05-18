@@ -358,8 +358,46 @@ a:hover {
 /* Footer */
 footer {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   border-top: 1px solid #eee;
-  color: #888;
-  font-size: 0.9em;
+  margin-top: 60px; /* Pushes the footer down cleanly away from your main content */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /* Centers the row of logos horizontally */
+  align-items: center;     /* Keeps them perfectly level */
+  gap: 25px;               /* Clean spacing between the icons */
+}
+
+/* Base style for Font Awesome Icons in footer */
+.footer-links a i {
+  font-size: 1.6rem;       /* Slightly more compact than the sidebar for a subtle footer feel */
+  color: #888;             /* Muted neutral tone by default */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Base style for Google Scholar SVG in footer */
+.footer-links a.scholar-icon svg {
+  width: 1.5rem;           /* Visually matches the weight of the font icons */
+  height: 1.5rem;
+  fill: #888;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effects for Font Awesome icons */
+.footer-links a:hover i {
+  color: #2a6f7d;          /* Turns signature Teal on hover */
+  transform: translateY(-2px);
+}
+
+/* Hover effects for Google Scholar SVG icon */
+.footer-links a:hover.scholar-icon svg {
+  fill: #2a6f7d;           /* Turns signature Teal on hover */
+  transform: translateY(-2px);
+}
+
+/* Disables underlines entirely for the link boxes */
+.footer-links a {
+  text-decoration: none;
 }
