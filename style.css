@@ -70,6 +70,27 @@ main {
   gap: 10px;
 }
 
+.sidebar-links {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: row; /* Changed to row to make them go side-by-side */
+  gap: 20px;          /* Clean spacing between icons */
+}
+
+.sidebar-links a {
+  font-size: 1.4rem;  /* Makes the logos slightly larger and easier to click */
+  color: #666;        /* Muted gray by default so they aren't distracting */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: #2a6f7d;     /* Swaps to your Seafoam Teal on hover */
+  text-decoration: none; /* Prevents an awkward underline appearing under the logo */
+  transform: translateY(-2px); /* Subtle, premium movement when hovered */
+}
+
 section {
   width: 100%;
   margin-bottom: 40px;
