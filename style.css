@@ -45,7 +45,7 @@ nav a.active {
 
 /* Layout Core */
 main {
-  max-width: 1000px; /* Increased from 900px to efficiently use left/right space */
+  max-width: 1100px; /* Increased from 900px to efficiently use left/right space */
   margin: 0 auto;
   padding: 40px 20px;
   display: block;
