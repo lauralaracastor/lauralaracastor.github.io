@@ -66,31 +66,42 @@ main {
   padding-top: 20px;
   border-top: 1px solid #eee;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  gap: 22px;           /* Slightly wider gap for larger icons */
+  align-items: center; /* Keeps everything perfectly leveled */
 }
 
-.sidebar-links {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  display: flex;
-  flex-direction: row; /* Changed to row to make them go side-by-side */
-  gap: 20px;          /* Clean spacing between icons */
-}
-
-.sidebar-links a {
-  font-size: 1.4rem;  /* Makes the logos slightly larger and easier to click */
-  color: #666;        /* Muted gray by default so they aren't distracting */
+/* Base style for the Font Awesome Icons */
+.sidebar-links a i {
+  font-size: 1.8rem;   /* Bumps up the size of LinkedIn, GitHub, Email */
+  color: #666;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.sidebar-links a:hover {
-  color: #2a6f7d;     /* Swaps to your Seafoam Teal on hover */
-  text-decoration: none; /* Prevents an awkward underline appearing under the logo */
-  transform: translateY(-2px); /* Subtle, premium movement when hovered */
+/* Base style for the Google Scholar SVG */
+.sidebar-links a.scholar-icon svg {
+  width: 1.65rem;      /* Matches the visual weight of the text icons */
+  height: 1.65rem;
+  fill: #666;          /* Colors the graphic gray to match the others */
+  transition: fill 0.2s ease, transform 0.2s ease;
 }
 
+/* Hover effects for Font Awesome links */
+.sidebar-links a:hover i {
+  color: #2a6f7d;      /* Turns Seafoam Teal */
+  transform: translateY(-3px); /* Subtle premium float up */
+}
+
+/* Hover effects for Google Scholar SVG link */
+.sidebar-links a:hover.scholar-icon svg {
+  fill: #2a6f7d;       /* Turns the graphic Seafoam Teal on hover */
+  transform: translateY(-3px);
+}
+
+/* Keeps browser from trying to underline the link boxes */
+.sidebar-links a {
+  text-decoration: none;
+}
 section {
   width: 100%;
   margin-bottom: 40px;
