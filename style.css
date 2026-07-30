@@ -219,6 +219,34 @@ a:hover {
   text-decoration: underline;
 }
 
+.card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+
+.card .meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0 0 6px 0;
+}
+
+.placeholder-note {
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.media-group h3.group-title {
+  font-size: 1.15rem;
+  color: #2a6f7d;
+  margin: 30px 0 14px 0;
+  font-weight: 600;
+}
+
+.media-group:first-of-type h3.group-title {
+  margin-top: 0;
+}
+
 /* Buttons (CV page) */
 .cv-buttons {
   margin-top: 30px;
